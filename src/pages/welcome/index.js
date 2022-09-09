@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image} from 'react-native';
-import styles from './styles'
+import StyleSheet from './styles'
 
 export default function Welcome() {
     return (
