@@ -1,6 +1,25 @@
+import { creativeNativeStackNavigator} from '@react-navigation/native-stack';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import Welcome from '../pages/welcome';
+import Signin from '../pages/signin';
 
-AppRegistry.registerComponent(appName, () => App);
+const Stack = creativeNativeStackNavigator
+
+export default function Routes(){
+    return(
+        <Stack.Navigator>
+            <Stack.Screen
+              name="Welcome"
+              component={Welcome}
+              options={{HeaderShown: false}}
+            />
+
+            <Stack.Screen
+              name="Cadastro"
+              component={Signin}
+              options={{HeaderShown: false}}
+            />        
+        </Stack.Navigator>
+
+    );
+}
