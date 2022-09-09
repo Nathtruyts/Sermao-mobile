@@ -1,16 +1,13 @@
 import React from 'react';
 import { View, Text, Image} from 'react-native';
-import StyleSheet from './styles'
+import styles from './styles'
 
 export default function Welcome() {
     return (
       <View style={styles.container}>
-
-      <View style={styles.conatinerLogo}>
+      <View style={styles.containerLogo}>
         <Image
            source={require('../../assets/Logo.png')}
-           style={{ width: '100%'}}
-           resizeMode ='contain'
          />  
       </View> 
 
