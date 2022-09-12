@@ -28,5 +28,21 @@ export default StyleSheet.create({
     text:{
         color:'#a1a1a1',
         fontSize: 8
+    },
+    button:{
+        position: 'absolute',
+        backgroundColor: '#38a69d',
+        borderRadius: 50,
+        paddingVertical: 8,
+        width: '60%',
+        alignSelf:'center',
+        bottom:'15%',
+        alignItems:'center',
+        justifyContent: 'center',
+    },
+    buttonText:{
+        fontSize:18,
+        color:'#fff',
+        fontWeight:'bold'
     }
 })
