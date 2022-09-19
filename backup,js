@@ -1,0 +1,31 @@
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export default HomeScreen = () => {
+    const clearOnbording = async () => {
+        try{
+            await AsyncStorage.removeItem('@viewedOnbording');
+        } catch (err) {
+            console.log('Error @clearOnbording: ', err)
+        }
+    }
+
+    return(
+        <View style={StyleSheet.container}>
+            <Text>Home screen</Text>
+            <TouchableOpacity onPress={clearOnbording}>
+                <Text>Clear Onbording</Text>
+            </TouchableOpacity>
+        </View>
+    );
+
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+   },    
+})
